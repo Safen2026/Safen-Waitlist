@@ -23,8 +23,8 @@ export default function Home() {
 
         <h1>Join the <span>waitlist.</span></h1>
         <p className="intro">
-          A safer Nigeria starts with all of us. Be among the first to experience
-          SAFEN and get notified when we launch.
+          {/* A safer Nigeria starts with all of us. Be among the first to experience
+          SAFEN and get notified when we launch. */}
         </p>
 
         <WaitlistForm />
