@@ -118,7 +118,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error:
-            "Please enter a valid Nigerian phone number, including the correct network prefix.",
+            "Please enter a valid Nigerian phone number",
         },
         { status: 400 },
       );
