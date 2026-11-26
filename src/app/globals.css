@@ -209,6 +209,138 @@ h1 span { color: var(--green); }
   overflow: hidden;
 }
 
+
+/* Success confirmation screen */
+
+.success-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 24px;
+  min-height: 390px;
+  padding: 40px 32px;
+  animation: successEntrance 650ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.success-icon {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e6f4eb;
+  color: #16834b;
+  animation: successIconPop 550ms 150ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.success-icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.success-content {
+  max-width: 440px;
+  animation: successContentReveal 550ms 250ms ease both;
+}
+
+.success-eyebrow {
+  color: #16834b;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  margin-bottom: 12px;
+}
+
+.success-content h2 {
+  color: #102957;
+  font-size: clamp(26px, 5vw, 34px);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.success-content > p:not(.success-eyebrow) {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.success-content .success-note {
+  margin-top: 16px;
+}
+
+.success-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: #16834b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  animation: successContentReveal 550ms 400ms ease both;
+}
+
+.success-footer span:last-child {
+  font-size: 9px;
+  letter-spacing: 2.5px;
+  color: #8a9a91;
+}
+
+@keyframes successEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes successIconPop {
+  from {
+    opacity: 0;
+    transform: scale(0.65);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes successContentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .success-card,
+  .success-icon,
+  .success-content,
+  .success-footer {
+    animation: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-card {
+    padding: 32px 22px;
+  }
+}
+
+
 .privacy {
   max-width: 360px;
   margin: 17px 0 0;
