@@ -166,17 +166,18 @@ export default function WaitlistForm() {
       />
 
       <label htmlFor="phone">Phone number</label>
-      <input
-        id="phone"
-        name="phone"
-        type="tel"
-        placeholder="Enter your phone number"
-        autoComplete="tel"
-        minLength={7}
-        maxLength={32}
-        required
-        disabled={status.kind === "loading"}
-      />
+<input
+  id="phone"
+  name="phone"
+  type="tel"
+  placeholder="0801 234 5678"
+  autoComplete="tel"
+  inputMode="tel"
+  minLength={10}
+  maxLength={17}
+  required
+  disabled={status.kind === "loading"}
+/>
 
       <div className="honeypot" aria-hidden="true">
         <label htmlFor="website">Leave this field empty</label>
